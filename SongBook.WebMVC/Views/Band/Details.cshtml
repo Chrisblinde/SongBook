@@ -1,0 +1,58 @@
+﻿@model SongBook.Models.BandDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BandDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BandId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BandId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Members)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Members)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YearsActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YearsActive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfAlbums)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfAlbums)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
