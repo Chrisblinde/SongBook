@@ -63,6 +63,10 @@
     <Compile Include="ShowDetail.cs" />
     <Compile Include="ShowEdit.cs" />
     <Compile Include="ShowListItem.cs" />
+    <Compile Include="SongCreate.cs" />
+    <Compile Include="SongDetail.cs" />
+    <Compile Include="SongEdit.cs" />
+    <Compile Include="SongListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

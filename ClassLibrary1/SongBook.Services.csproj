@@ -57,6 +57,7 @@
     <Compile Include="BandService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShowService.cs" />
+    <Compile Include="SongService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
