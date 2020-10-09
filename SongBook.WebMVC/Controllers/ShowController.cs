@@ -16,11 +16,21 @@ namespace SongBook.WebMVC.Controllers
     [Authorize]
     public class ShowController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private  ApplicationDbContext db = new ApplicationDbContext();
         // GET: Show
+
+       
+        
         public ActionResult Index()
         {
+           
+            
+           
             var service = CreateShowService();
+
+            var name = db.Bands.Select(n => n.Name);
+            ViewBag.name = name;
+          
             var model = service.GetShows();
 
             return View(model);

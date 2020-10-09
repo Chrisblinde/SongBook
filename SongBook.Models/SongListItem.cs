@@ -16,6 +16,7 @@ namespace SongBook.Models
         [Display(Name = "Band Name")]
         public int BandID { get; set; }
         [ForeignKey("Show")]
+        [Display(Name = "Date")]
         public int ShowId { get; set; }
         [Required]
         public string Name { get; set; }

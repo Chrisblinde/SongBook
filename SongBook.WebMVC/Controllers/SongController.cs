@@ -1,5 +1,6 @@
 ﻿using ClassLibrary1;
 using Microsoft.AspNet.Identity;
+using SongBook.Data;
 using SongBook.Models;
 using System;
 using System.Collections.Generic;
@@ -12,10 +13,11 @@ namespace SongBook.WebMVC.Controllers
     [Authorize]
     public class SongController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         // GET: Song
         public ActionResult Index()
         {
-           
+            
             var service = CreateSongService();
             var model = service.GetSongs();
             return View(model);
@@ -23,6 +25,8 @@ namespace SongBook.WebMVC.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.BandId = new SelectList(db.Bands, "BandId", "Name");
+            ViewBag.ShowId = new SelectList(db.Shows, "ShowId", "Date");
             return View();
         }
 
@@ -120,8 +124,12 @@ namespace SongBook.WebMVC.Controllers
             var service = new SongService(userId);
             return service;
         }
+
     }
 }
+       
+            
+        
 
             
 

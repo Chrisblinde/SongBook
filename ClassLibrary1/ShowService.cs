@@ -3,6 +3,8 @@ using SongBook.Data;
 using SongBook.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +13,7 @@ namespace SongBook.Services
 {
     public class ShowService
     {
+       
         private readonly Guid _userId;
 
         public ShowService(Guid userId)
@@ -41,6 +44,7 @@ namespace SongBook.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
+
                 var query =
                     ctx
                         .Shows
@@ -61,57 +65,63 @@ namespace SongBook.Services
             }
         }
 
-        public ShowDetail GetShowById(int id)
-        {
-            using (var ctx = new ApplicationDbContext())
+            public ShowDetail GetShowById(int id)
             {
-                var entity =
-                    ctx
-                        .Shows
-                        .Single(e => e.ShowId == id && e.UserId == _userId);
-                return
-                    new ShowDetail
-                    {
-                        ShowId = entity.ShowId,
-                        BandId = entity.Band.BandId,
-                        Venue = entity.Venue,
-                        Location = entity.Location,
-                        Date = entity.Date
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Shows
+                            .Single(e => e.ShowId == id && e.UserId == _userId);
+                    return
+                        new ShowDetail
+                        {
+                            ShowId = entity.ShowId,
+                            BandId = entity.BandId,
+                            Venue = entity.Venue,
+                            Location = entity.Location,
+                            Date = entity.Date
 
-                    };
+                        };
+                }
             }
-        }
 
-        public bool UpdateShow(ShowEdit model)
-        {
-            using (var ctx = new ApplicationDbContext())
+            public bool UpdateShow(ShowEdit model)
             {
-                var entity =
-                    ctx
-                        .Shows
-                        .Single(e => e.ShowId == model.ShowId && e.UserId == _userId);
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Shows
+                            .Single(e => e.ShowId == model.ShowId && e.UserId == _userId);
 
-                entity.BandId = model.BandId;
-                entity.Venue = model.Venue;
-                entity.Location = model.Location;
-                entity.Date = model.Date;
+                    entity.BandId = model.BandId;
+                    entity.Venue = model.Venue;
+                    entity.Location = model.Location;
+                    entity.Date = model.Date;
 
-                return ctx.SaveChanges() == 1;
+                    return ctx.SaveChanges() == 1;
+                }
             }
-        }
 
-        public bool DeleteShow(int showId)
-        {
-            using(var ctx = new ApplicationDbContext())
+            public bool DeleteShow(int showId)
             {
-                var entity =
-                    ctx
-                        .Shows
-                        .Single(e => e.ShowId == showId && e.UserId == _userId);
-                ctx.Shows.Remove(entity);
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var entity =
+                        ctx
+                            .Shows
+                            .Single(e => e.ShowId == showId && e.UserId == _userId);
+                    ctx.Shows.Remove(entity);
 
-                return ctx.SaveChanges() == 1;
+                    return ctx.SaveChanges() == 1;
+                }
             }
-        }
+
+         
+        
     }
 }
+          
+            
+        
