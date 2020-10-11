@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+   
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -22,3 +23,86 @@ select,
 textarea {
     max-width: 280px;
 }
+.body-content{
+    background-color:black;
+  
+    
+}
+
+.body-content h2 {
+    color: #A2E3C4;
+}
+
+.table {
+    background-color:black;
+    color: whitesmoke;
+    height:500px;
+    font-size:30px;
+}
+
+.table th {
+    height:100px;
+    font-size:
+}
+
+.table th, td{
+    border:1px solid black;
+    width:50px;
+}
+
+
+
+.jumbotron h1 {
+    text-align: left;
+    font-size: 65px;
+    font-family: Rockwell;
+    color: #A2E3C4 
+}
+.jumbotron p {
+    text-align: left;
+    font-family: Arial;
+    color: #7E8d85;
+}
+
+#footer {
+    text-align:left;
+}
+
+
+
+.row-glow h2 {
+    text-align: center;
+    font-family: Arial;
+    font-size: 25px;
+    padding-top: 3em;
+    color: #7E8d85;
+}
+.row-jambase {
+    color: #7E8d85;
+}
+
+.row-nugs {
+    color: #7E8d85;
+}
+
+.card-band {
+    background-color: white
+}
+
+.form-control{
+    border-radius:20px;
+    background-image:url("Assests/glow1.jpg");
+    color:#A2E3C4;
+}
+
+.row-edit h2 {
+    background-image:url("Assests/glow1.jpg");
+    height:100px;
+    color:wheat;
+}
+
+
+
+
+    
+

@@ -4,25 +4,17 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Song Archive</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+  <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ShowId)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.BandId)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Venue)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Location)
-        </th>
+      
         <th>
             @Html.DisplayNameFor(model => model.Date)
         </th>
@@ -32,26 +24,19 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ShowId)
+            <a href="@Url.Action("Details", "Band", new {id = item.BandId})">
+            @Html.DisplayFor(modelItem => item.BandId)</a>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.BandId)
+            <a href="@Url.Action("Details", "Show", new {id = item.ShowId})">
+                @Html.DisplayFor(modelItem => item.Date)</a>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Venue)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Location)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Date)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ShowId  }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ShowId  }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ShowId })
+           
+           
         </td>
     </tr>
 }
 
 </table>
+   

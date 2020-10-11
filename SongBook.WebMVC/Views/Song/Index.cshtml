@@ -4,16 +4,14 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Song Archive</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.SongId)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.BandID)
         </th>
@@ -31,24 +29,24 @@
 
 @foreach (var item in Model) {
     <tr>
+       
         <td>
-            @Html.DisplayFor(modelItem => item.SongId)
-        </td>
-        <td>
+            <a href="@Url.Action("Details", "Band", new { id = item.BandID } )">
             @Html.DisplayFor(modelItem => item.BandID)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Show.Date)
+            <a href="@Url.Action("Details", "Show", new { id = item.ShowId } )">
+                @Html.DisplayFor(modelItem => item.ShowId)</a>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Name)
+            <a href="@Url.Action("Details", "Song", new { id = item.SongId } )">
+                @Html.DisplayFor(modelItem => item.Name)</a>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Length)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new {  id=item.SongId}) |
-            @Html.ActionLink("Details", "Details", new {  id=item.SongId}) |
+         
             @Html.ActionLink("Delete", "Delete", new {  id=item.SongId})
         </td>
     </tr>

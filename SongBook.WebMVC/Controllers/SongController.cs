@@ -15,11 +15,13 @@ namespace SongBook.WebMVC.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
         // GET: Song
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
-            
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+
             var service = CreateSongService();
-            var model = service.GetSongs();
+            var model = service.GetSongs(sortOrder);
             return View(model);
         }
 

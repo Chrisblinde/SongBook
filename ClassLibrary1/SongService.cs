@@ -37,8 +37,9 @@ namespace ClassLibrary1
             }
         }
 
-        public IEnumerable<SongListItem> GetSongs()
+        public IEnumerable<SongListItem> GetSongs(string sortOrder)
         {
+         
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
@@ -54,9 +55,23 @@ namespace ClassLibrary1
                                 ShowId = e.ShowId,
                                 Name = e.Name,
                                 Length = e.Length
-
                             });
-                return query.ToArray();
+                switch (sortOrder)
+                {
+                    case "name_desc":
+                        query = query.OrderByDescending(s => s.Name);
+                        break;
+                    case "Date":
+                        query = query.OrderBy(s => s.ShowId);
+                        break;
+                    case "Name":
+                        query = query.OrderBy(s => s.BandID);
+                        break;
+                    default:
+                        query = query.OrderBy(s => s.SongId);
+                        break;
+                }
+                        return query.ToArray();
             }
         }
 
@@ -71,6 +86,7 @@ namespace ClassLibrary1
                 return
                     new SongDetail
                     {
+                        SongId = entity.SongId,
                         BandID = entity.BandID,
                         ShowId = entity.ShowId,
                         Name = entity.Name,
@@ -88,7 +104,7 @@ namespace ClassLibrary1
                     .Songs
                     .Single(e => e.SongId == model.SongId && e.UserId == _userId);
 
-                entity.SongId = model.SongId;
+                //entity.SongId = model.SongId;
                 entity.BandID = model.BandID;
                 entity.ShowId = model.ShowId;
                 entity.Name = model.Name;

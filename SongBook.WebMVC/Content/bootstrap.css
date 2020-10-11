@@ -5036,11 +5036,11 @@ a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eeeeee;
+  
 }
 .jumbotron h1,
 .jumbotron .h1 {
-  color: inherit;
+  color: black;
 }
 .jumbotron p {
   margin-bottom: 15px;

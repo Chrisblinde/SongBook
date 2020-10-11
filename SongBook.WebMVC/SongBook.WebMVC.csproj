@@ -182,6 +182,11 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Assests\glow1.jpg" />
+    <Content Include="Content\Assests\JamBaseLogo.jpg" />
+    <Content Include="Content\Assests\NugsLogo.jpg" />
+    <Content Include="Content\Assests\Phish1.jpg" />
+    <Content Include="Content\Assests\WoodNotes.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -252,6 +257,7 @@
     <Content Include="Views\Song\Details.cshtml" />
     <Content Include="Views\Song\Edit.cshtml" />
     <Content Include="Views\Song\Delete.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
