@@ -3,17 +3,14 @@
 @{
     ViewBag.Title = "Edit";
 }
-<div class="row row-edit">
-    <div class="col-md-12">
-        <h2>Edit</h2>
-    </div>
-</div>
+
+<h2> Edit Existing Song</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-        <hr />
     <div class="form-horizontal">
+        <hr />
     
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.SongId)

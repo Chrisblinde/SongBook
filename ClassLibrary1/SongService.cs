@@ -37,7 +37,7 @@ namespace ClassLibrary1
             }
         }
 
-        public IEnumerable<SongListItem> GetSongs(string sortOrder)
+        public IEnumerable<SongListItem> GetSongs()
         {
          
             using (var ctx = new ApplicationDbContext())
@@ -56,21 +56,7 @@ namespace ClassLibrary1
                                 Name = e.Name,
                                 Length = e.Length
                             });
-                switch (sortOrder)
-                {
-                    case "name_desc":
-                        query = query.OrderByDescending(s => s.Name);
-                        break;
-                    case "Date":
-                        query = query.OrderBy(s => s.ShowId);
-                        break;
-                    case "Name":
-                        query = query.OrderBy(s => s.BandID);
-                        break;
-                    default:
-                        query = query.OrderBy(s => s.SongId);
-                        break;
-                }
+               
                         return query.ToArray();
             }
         }

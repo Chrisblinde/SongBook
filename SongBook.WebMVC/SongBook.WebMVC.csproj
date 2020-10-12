@@ -182,11 +182,16 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Assests\BlackBricks.jpg" />
+    <Content Include="Content\Assests\BlackTexture.jpg" />
+    <Content Include="Content\Assests\BlackWood2.jpg" />
     <Content Include="Content\Assests\glow1.jpg" />
+    <Content Include="Content\Assests\GravelTexture.jpg" />
     <Content Include="Content\Assests\JamBaseLogo.jpg" />
     <Content Include="Content\Assests\NugsLogo.jpg" />
     <Content Include="Content\Assests\Phish1.jpg" />
     <Content Include="Content\Assests\WoodNotes.jpg" />
+    <Content Include="Content\Assests\BlackWood.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
