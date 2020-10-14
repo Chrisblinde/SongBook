@@ -7,7 +7,7 @@
 <h2>Band Archive</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add a Band", "Create")
 </p>
 
 @if (TempData.ContainsKey("SaveResult"))
@@ -42,7 +42,6 @@
             @Html.DisplayFor(modelItem => item.Members)
         </td>
         <td>
-
         </td>
     </tr>
    

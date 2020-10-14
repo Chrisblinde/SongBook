@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-   
+    color: #A2E3C4;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -23,15 +23,27 @@ select,
 textarea {
     max-width: 280px;
 }
-.body-content{
-    background-color:black;
-  
-    
+
+.body-content {
+    background-color: black;
 }
 
-.body-content h2 {
+    .body-content h2 {
+        color: #A2E3C4;
+        background-image: url("Assests/glow1.jpg");
+    }
+
+    .body-content h4 {
+        color: #A2E3C4;
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+.btn-default {
     color: #A2E3C4;
 }
+
 
 .table {
     background-color: white;
@@ -40,24 +52,25 @@ textarea {
     font-size: 30px;
 }
 
-.table th {
-    height:100px;
-    font-size:20px;
-}
+    .table th {
+        height: 100px;
+        font-size: 20px;
+    }
 
-.table th, td{
-    border:1px solid black;
-    width:50px;
-}
+    .table th, td {
+        border: 1px solid black;
+        width: 50px;
+    }
 
 
 
 .jumbotron h1 {
     text-align: left;
     font-size: 85px;
-    font-family:Rockwell;
+    font-family: Rockwell;
     color: #A2E3C4;
 }
+
 .jumbotron p {
     text-align: left;
     font-family: Arial;
@@ -65,7 +78,7 @@ textarea {
 }
 
 #footer {
-    text-align:left;
+    text-align: left;
 }
 
 
@@ -77,94 +90,108 @@ textarea {
     padding-top: 3em;
     color: #7E8d85;
 }
+
 .row-jambase {
     color: #7E8d85;
 }
+
+    .row-jambase h3 {
+        font-family: Rockwell;
+        color: #A2E3C4;
+    }
 
 .row-nugs {
     color: #7E8d85;
 }
 
+    .row-nugs h3 {
+        font-family: Rockwell;
+        color: #A2E3C4;
+    }
+
 .card-band {
     background-color: white
 }
 
-.form-control{
-    border-radius:20px;
-    background-image:url("Assests/glow1.jpg");
-    color:#A2E3C4;
-    font-family:Elephant;
+.form-control {
+    border-radius: 20px;
+    background-image: url("Assests/glow1.jpg");
+    color: #A2E3C4;
+    font-family: Rockwell;
 }
 
 
 
 
-.btn-default{
-    background-color:black;
+.btn-default {
+    background-color: black;
 }
 
-.form-horizontal .form-group{
-    margin-left:250px;
-    margin-top:50px;
+.form-horizontal .form-group {
+    margin-left: 250px;
+    margin-top: 50px;
 }
 
-.form-horizontal{
-    background-image:url("Assests/GravelTexture.jpg");
-    height:500px;
+.form-horizontal {
+    background-image: url("Assests/GravelTexture.jpg");
+    height: 500px;
 }
-.control-label{
-    color:#F0F7F4;
+
+.control-label {
+    color: #F0F7F4;
 }
 
 .dl-horizontal {
     background-image: url("Assests/BlackTexture.jpg");
-    color:#F0F7F4;
-    margin-top:100px;
-    margin-bottom:100px;
-    padding:50px 50px;
-    font-size:25px;
+    color: #F0F7F4;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 50px 50px;
+    font-size: 25px;
 }
 
-.table tr{
-    font-family:'Century Schoolbook';
-    background-image:url(Assests/GravelTexture.jpg);
-    width:100%;
+.table tr {
+    font-family: 'Century Schoolbook';
+    background-image: url(Assests/GravelTexture.jpg);
+    width: 100%;
 }
 
-.container{
-   width:100%
+.container {
+    width: 100%
 }
+
 .table-show {
     background-image: url("Assests/GravelTexture.jpg");
     color: #A2E3C4;
     height: 500px;
     font-size: 50px;
-    width:100%;
-    margin-bottom:20px;
-    font-family:'Cambria Math';
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: 'Cambria Math';
 }
 
-.table-show th {
-    height: 100px;
-    font-size: 20px;
-}
+    .table-show th {
+        height: 100px;
+        font-size: 20px;
+    }
 
-.table-show th, td {
-    border: 1px solid black;
-    width: 50px;
-}
+    .table-show th, td {
+        border: 1px solid black;
+        width: 50px;
+    }
+
 .container-details {
     border: 5px solid black;
-    background-image:url("Assests/GravelTexture.jpg");
+    background-color: black;
     color: #A2E3C4;
-    text-shadow:3px 4px 2px black;
-    max-width:100%;
-    width:100%;
-    height:100px;
-    
+    text-shadow: 3px 4px 2px black;
+    max-width: 100%;
+    width: 100%;
+    height: 100px;
 }
-.navbarCollapse{
-    color:black;
+
+.navbarCollapse {
+    color: black;
 }
 
 
@@ -174,22 +201,22 @@ textarea {
 }
 
 .container-phish {
-    background-image: url("Assests/Phish1.jpg");
+    background-image: url("Assests/GravelTexture.jpg");
     border: 5px solid black;
     max-width: 100%;
     width: 100%;
     height: 100px;
 }
 
-.container-filler h2{
-    background-image:url("Assests/BlackTexture.jpg");
-    width:100%;
-    height:100%;
+.container-filler h2 {
+    background-image: url("Assests/BlackTexture.jpg");
+    width: 100%;
+    height: 100%;
 }
 
+.jumbotron h3 {
+    font-family: Rockwell;
+    color: #A2E3C4;
+}
 
-
-
-
-    
 

@@ -28,8 +28,6 @@ namespace SongBook.WebMVC.Controllers
            
             var service = CreateShowService();
 
-            var name = db.Bands.Select(n => n.Name);
-            ViewBag.name = name;
           
             var model = service.GetShows();
 
